@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Cards | Send a Moment of Peace</title>
+    <meta name="description" content="Send a calming stress-relief card to someone who needs a moment of tranquility.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1>Wellness Cards</h1>
+            <p class="subtitle">Share a breath of fresh air with someone special.</p>
+        </header>
+
+        <section class="card-selection">
+            <h2>Select a Card</h2>
+            <div class="card-grid" id="cardGrid">
+                <div class="card-option active" data-type="zen">
+                    <div class="card-preview zen-preview"></div>
+                    <span>Zen Garden</span>
+                </div>
+                <div class="card-option" data-type="ocean">
+                    <div class="card-preview ocean-preview"></div>
+                    <span>Deep Ocean</span>
+                </div>
+                <div class="card-option" data-type="forest">
+                    <div class="card-preview forest-preview"></div>
+                    <span>Quiet Forest</span>
+                </div>
+                <div class="card-option" data-type="nebula">
+                    <div class="card-preview nebula-preview"></div>
+                    <span>Starry Night</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="message-form">
+            <div class="glass-panel">
+                <div class="form-group">
+                    <label for="recipient">To</label>
+                    <input type="text" id="recipient" placeholder="Recipient's Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" rows="4" placeholder="Write something calming..." required></textarea>
+                </div>
+                <button id="sendBtn" class="send-button">
+                    <span class="btn-text">Send Calm</span>
+                    <div class="btn-loader"></div>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <div id="successOverlay" class="overlay hidden">
+        <div class="success-content">
+            <div class="check-icon">✓</div>
+            <h2>Peace Sent!</h2>
+            <p>Your wellness card is on its way.</p>
+            <button id="closeBtn">Send Another</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
